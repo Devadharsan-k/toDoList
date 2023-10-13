@@ -1,4 +1,4 @@
-import Task from "../task/task";
+import Task from "../tasks/Tasks";
 import styles from "./tasks.module.css";
 
 const Tasks = ({ tasks, onComplete, onDelete}) => {
