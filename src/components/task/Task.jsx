@@ -11,7 +11,7 @@ const Task = ({ task, onComplete, onDelete}) => {
       {task.isCompleted ? <BsFillCheckCircleFill /> : <div />}
       </button>
 
-      <p className={task.isCompleted ? styles.textCompleted : ""}>{task.title}</p>
+      <p contentEditable={true} className={task.isCompleted ? styles.textCompleted : ""}>{task.title} </p>
 
       <button className={styles.deleteButton} onClick={() => onDelete(task.id)}>
         <GoTrash size={23}/>
