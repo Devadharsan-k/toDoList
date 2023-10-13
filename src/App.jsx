@@ -62,9 +62,11 @@ function App() {
     <>
       <Header onAddTask={addTask}/>
       <Tasks tasks={tasks} onComplete={toggleTaskCompletedById} onDelete={deleteTask} />
-      <div className="del">
-      <button onClick={clearLocalStorage} className="delete">Delete All</button>
-      </div>
+      {tasks.length > 1 && (
+        <div className="del">
+          <button onClick={clearLocalStorage} className="delete">Delete All</button>
+        </div>
+      )}
     </>
   )
 }
